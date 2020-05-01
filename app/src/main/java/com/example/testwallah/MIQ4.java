@@ -33,4 +33,29 @@ public class MIQ4 extends AppCompatActivity {
         affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P2-TP-Gr1/semaine_0";
         startActivity(new Intent(this, affiche.class));
     }
+
+    public void MIQ4P2GR2(View view) {
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P2-TP-Gr2/semaine_0";
+        startActivity(new Intent(this, affiche.class));
+    }
+
+    public void MIQ4P3GR1(View view) {
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P3-TP-Gr1/semaine_0";
+        startActivity(new Intent(this, affiche.class));
+    }
+
+    public void MIQ4P3GR2(View view) {
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P3-TP-Gr2/semaine_0";
+        startActivity(new Intent(this, affiche.class));
+    }
+
+    public void MIQ4P4GR1(View view) {
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P4-TP-Gr1/semaine_0";
+        startActivity(new Intent(this, affiche.class));
+    }
+
+    public void MIQ4P4GR2(View view) {
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P4-TP-Gr2/semaine_0";
+        startActivity(new Intent(this, affiche.class));
+    }
 }

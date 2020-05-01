@@ -24,7 +24,8 @@
         android:layout_marginBottom="256dp"
         android:text="P4 TP1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button20" />
+        app:layout_constraintStart_toStartOf="@+id/button20"
+        android:onClick="MIQ4P4GR1"/>
 
     <Button
         android:id="@+id/button20"
@@ -33,7 +34,8 @@
         android:layout_marginBottom="342dp"
         android:text="P3 TP1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/button18" />
+        app:layout_constraintStart_toStartOf="@+id/button18"
+        android:onClick="MIQ4P3GR1"/>
 
     <Button
         android:id="@+id/button18"
@@ -51,7 +53,8 @@
         android:layout_height="wrap_content"
         android:text="P2 TP2"
         app:layout_constraintEnd_toEndOf="@+id/button16"
-        app:layout_constraintTop_toTopOf="@+id/button18" />
+        app:layout_constraintTop_toTopOf="@+id/button18"
+        android:onClick="MIQ4P2GR2"/>
 
     <Button
         android:id="@+id/button16"
@@ -83,7 +86,8 @@
         android:layout_height="wrap_content"
         android:text="P3 TP2"
         app:layout_constraintEnd_toEndOf="@+id/button19"
-        app:layout_constraintTop_toTopOf="@+id/button20" />
+        app:layout_constraintTop_toTopOf="@+id/button20"
+        android:onClick="MIQ4P3GR2"/>
 
     <Button
         android:id="@+id/button23"
@@ -91,6 +95,7 @@
         android:layout_height="wrap_content"
         android:text="P4 TP2"
         app:layout_constraintEnd_toEndOf="@+id/button21"
-        app:layout_constraintTop_toTopOf="@+id/button22" />
+        app:layout_constraintTop_toTopOf="@+id/button22"
+        android:onClick="MIQ4P4GR2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
