@@ -28,7 +28,7 @@ public class MIQ4 extends AppCompatActivity {
         affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P1/semaine_0";
         startActivity(new Intent(this, affiche.class));
     }
-
+    int v=4;
     public void MIQ4P2GR1(View view) {
         affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ4/MIQ4-P2-TP-Gr1/semaine_0";
         startActivity(new Intent(this, affiche.class));
