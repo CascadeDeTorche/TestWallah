@@ -27,4 +27,8 @@ public class MIQ  extends AppCompatActivity {
     public void MIQ4(View view) {
         startActivity(new Intent(this, MIQ4.class));
     }
+
+    public void MIQ5(View view) {
+        startActivity(new Intent(this, MIQ5.class));
+    }
 }

@@ -80,6 +80,16 @@
                 />
 
         </activity>
+        <activity android:name=".MIQ5"
+
+            android:label="MIQ5"
+            android:parentActivityName=".MIQ">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"
+                />
+
+        </activity>
 
 </application>
 
