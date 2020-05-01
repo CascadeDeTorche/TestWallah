@@ -15,6 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -22,8 +24,8 @@ import java.net.URL;
 
 
 class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-    ImageView bmImage;
-    public DownloadImageTask(ImageView bmImage) {
+    PhotoView bmImage;
+    public DownloadImageTask(PhotoView bmImage) {
         this.bmImage = bmImage;
     }
 
@@ -82,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     private void refreshPic(){
         if (this.url.contains("http")){
 
-            new DownloadImageTask((ImageView) findViewById(R.id.imageView)).execute(url);
+            
         }
         else{
             this.imageView.setImageResource(R.drawable.logo);
