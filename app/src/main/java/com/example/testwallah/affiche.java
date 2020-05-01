@@ -13,7 +13,7 @@ public class affiche  extends AppCompatActivity {
 
     ImageView imageView;
     protected void onCreate(Bundle savedInstanceState) {
- 
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.affiche);
         PhotoView photoView = (PhotoView) findViewById(R.id.photo_view);
