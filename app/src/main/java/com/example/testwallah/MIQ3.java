@@ -18,10 +18,12 @@ public class MIQ3 extends AppCompatActivity {
 
         affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ3/MIQ3-Gr1/semaine_0";
         startActivity(new Intent(this, affiche.class));
+        affiche.numérosemaine=0;
     }
 
     public void MIQ3GR2(View view) {
         affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ3/MIQ3-Gr1/semaine_0";
         startActivity(new Intent(this, affiche.class));
+        affiche.numérosemaine=0;
     }
 }

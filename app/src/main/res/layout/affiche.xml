@@ -8,6 +8,31 @@
     <com.github.chrisbanes.photoview.PhotoView
         android:id="@+id/photo_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:srcCompat="@drawable/logo" />
+        android:layout_height="450dp"
+        android:layout_marginTop="141dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <Button
+        android:id="@+id/button32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Suivante"
+        app:layout_constraintBottom_toBottomOf="@+id/button33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button33"
+        android:onClick="Semaineplus"/>
+
+    <Button
+        android:id="@+id/button33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Précédente"
+        app:layout_constraintEnd_toStartOf="@+id/button32"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="591dp"
+        android:onClick="Semainemoins"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

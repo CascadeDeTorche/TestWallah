@@ -17,12 +17,14 @@ public class MIQ2 extends AppCompatActivity {
     }
 
     public void MIQ2GR1(View view) {
-        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ2/MIQ2-Gr1/semaine_0\n";
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ2/MIQ2-Gr1/semaine_0";
         startActivity(new Intent(this, affiche.class));
+        affiche.numérosemaine=0;
     }
 
     public void MIQ1GR2(View view) {
-        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ2/MIQ2-Gr2/semaine_0\n";
+        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ2/MIQ2-Gr2/semaine_0";
         startActivity(new Intent(this, affiche.class));
+        affiche.numérosemaine=0;
     }
 }
