@@ -1,5 +1,6 @@
 package com.example.testwallah;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -32,7 +33,7 @@ public class affiche  extends AppCompatActivity {
         {
             this.numérosemaine=2;
         }
-        new DownloadImageTask((PhotoView) findViewById(R.id.photo_view)).execute(this.url);
+        startActivity(new Intent(this, affiche.class));
 
     }
 
@@ -42,6 +43,6 @@ public class affiche  extends AppCompatActivity {
         {
             this.numérosemaine=0;
         }
-        new DownloadImageTask((PhotoView) findViewById(R.id.photo_view)).execute(this.url);
+        startActivity(new Intent(this, affiche.class));
     }
 }
