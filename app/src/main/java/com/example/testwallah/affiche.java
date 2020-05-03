@@ -1,5 +1,8 @@
 package com.example.testwallah;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,14 +13,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.github.chrisbanes.photoview.PhotoView;
 
 
-public class affiche  extends AppCompatActivity {
+public class affiche extends AppCompatActivity {
     public static String url;
     public static int numérosemaine;
-
+    private static final int MAX_SEMAINE = 2;
+    private Context context = affiche.this;
     ImageView imageView;
+
     protected void onCreate(Bundle savedInstanceState) {
-        String urllocal = this.url.substring(0, this.url.length()-1);
-        this.url=urllocal+this.numérosemaine;
+        String urllocal = this.url.substring(0, this.url.length() - 1);
+        this.url = urllocal + this.numérosemaine;
         System.out.println(this.url);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.affiche);
@@ -28,21 +33,36 @@ public class affiche  extends AppCompatActivity {
 
 
     public void Semaineplus(View view) {
-        numérosemaine=numérosemaine+1;
-        if(this.numérosemaine>=2)
-        {
-            this.numérosemaine=2;
+        numérosemaine = numérosemaine + 1;
+        if (this.numérosemaine == MAX_SEMAINE+1) {
+            numérosemaine=2;
+            dialog("Semaine max atteinte","Vous ne pouvez pas naviguer plus loin dans l'edt");
+            return;
         }
-        startActivity(new Intent(this, affiche.class));
+        else{
+            startActivity(new Intent(this, affiche.class));
+
+        }
 
     }
 
     public void Semainemoins(View view) {
-        numérosemaine=numérosemaine-1;
-        if(this.numérosemaine<=0)
-        {
-            this.numérosemaine=0;
+        numérosemaine = numérosemaine - 1;
+        if (this.numérosemaine < 0) {
+            this.numérosemaine = 0;
+        } else {
+            startActivity(new Intent(this, affiche.class));
         }
-        startActivity(new Intent(this, affiche.class));
     }
+
+    public void dialog(String title, String text) {
+        new AlertDialog.Builder(this.context)
+                .setTitle(title)
+                .setMessage(text)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                }).show();
+    }
+
 }
