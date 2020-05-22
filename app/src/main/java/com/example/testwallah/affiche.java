@@ -49,6 +49,7 @@ public class affiche extends AppCompatActivity {
     public void Semainemoins(View view) {
         numérosemaine = numérosemaine - 1;
         if (this.numérosemaine < 0) {
+            dialog("Semaine min atteinte","Vous ne pouvez pas naviguer plus loin dans l'edt");
             this.numérosemaine = 0;
         } else {
             startActivity(new Intent(this, affiche.class));
