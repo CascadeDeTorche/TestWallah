@@ -4,6 +4,6 @@
     <string name="banniere">Banniere</string>
     <string name="favoris">Favoris</string>
     <string name="a_propos">A propos</string>
-    <string name="textview">Application codee par Johan Bertrand qui aime les conseils d administration :P </string>
+    <string name="textview">Application codée par des étudiants de l\'INSA Strasbourg dans le cadre d\'un électif encadré par Mr. Amadou Coulibaly  </string>
     <string name="demande_d_ajout">Demande d\'ajout</string>
 </resources>
