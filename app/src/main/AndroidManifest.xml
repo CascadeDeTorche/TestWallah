@@ -2,16 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.testwallah">
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="EDTVie"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".parcourir"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,78 +22,64 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".affiche"
-
+        <activity
+            android:name=".affiche"
             android:label="Affiche"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Recherche"
-
+        <activity
+            android:name=".Recherche"
             android:label="Rechercher"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MIQ"
-
+        <activity
+            android:name=".MIQ"
             android:label="MIQ"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MIQ2"
-
+        <activity
+            android:name=".MIQ2"
             android:label="MIQ2"
             android:parentActivityName=".MIQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MIQ3"
-
+        <activity
+            android:name=".MIQ3"
             android:label="MIQ3"
             android:parentActivityName=".MIQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MIQ4"
-
+        <activity
+            android:name=".MIQ4"
             android:label="MIQ4"
             android:parentActivityName=".MIQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-        <activity android:name=".MIQ5"
-
+        <activity android:name=".AproposActivity"/>
+        <activity android:name=".FavorisActivity" />
+        <activity
+            android:name=".MIQ5"
             android:label="MIQ5"
             android:parentActivityName=".MIQ">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"
-                />
-
+                android:value=".MainActivity" />
         </activity>
-
-</application>
+    </application>
 
 </manifest>

@@ -2,92 +2,75 @@ package com.example.testwallah;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-
-import com.github.chrisbanes.photoview.PhotoView;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-
-
-class DownloadImageTask extends AsyncTask<String, Void, Bitmap> {
-    PhotoView bmImage;
-    public DownloadImageTask(PhotoView bmImage) {
-        this.bmImage = bmImage;
-    }
-
-    protected Bitmap doInBackground(String... urls) {
-        String urldisplay = urls[0];
-        Bitmap mIcon11 = null;
-        try {
-            InputStream in = new java.net.URL(urldisplay).openStream();
-            mIcon11 = BitmapFactory.decodeStream(in);
-        } catch (Exception e) {
-            Log.e("Error", e.getMessage());
-            e.printStackTrace();
-        }
-        return mIcon11;
-    }
-
-    protected void onPostExecute(Bitmap result) {
-        bmImage.setImageBitmap(result);
-    }
-}
-
-
 
 public class MainActivity extends AppCompatActivity {
-
-    public String url;
-    Button button;
-    ImageView imageView;
+    Button boutonFav;
+    Button boutonParcourir;
+    Button boutonHome;
+    Button boutonAPropos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        url="null";
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
+        getSupportActionBar().hide(); //hide the title bar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        imageView = findViewById(R.id.imageView);
-        button = findViewById(R.id.button);
 
-        refreshPic();
+        boutonFav=findViewById(R.id.bouton_favoris);
+        boutonParcourir =findViewById(R.id.bouton_parcourir_edt);
+        boutonHome=findViewById(R.id.bouton_Home);
+        boutonAPropos=findViewById(R.id.button_a_propos);
 
+        boutonFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lancerFavoris();
+            }
+        });
 
+        boutonParcourir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                parcourir();
+
+            }
+        });
+
+        boutonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                home();
+            }
+        });
+
+        boutonAPropos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lancerAPropos();
+            }
+        });
 
     }
 
-    public void rechercher(View view)
-    {
-        startActivity(new Intent(this,Recherche.class));
-    }
-    private void refreshUrl() {
-        affiche.url="https://dakaryon.pythonanywhere.com/Stagiaires/MIQ3/MIQ3-Gr2/semaine_0";
-    }
-    public void Miq(View view)
-    {
-        startActivity(new Intent(this,MIQ.class));
+    void lancerFavoris(){
+        startActivity(new Intent(this, com.example.testwallah.FavorisActivity.class));
     }
 
+    void lancerAPropos(){
+        startActivity(new Intent(this, com.example.testwallah.AproposActivity.class));
+    }
 
-    private void refreshPic(){
-        if (this.url.contains("http")){
+    void home(){
+        startActivity(new Intent(this,MainActivity.class));
+    }
 
-            
-        }
-        else{
-            this.imageView.setImageResource(R.drawable.logo);
-        }
+    void parcourir(){
+        startActivity(new Intent(this,parcourir.class));
+
     }
 }

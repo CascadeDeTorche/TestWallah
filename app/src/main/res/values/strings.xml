@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">TestWallah</string>
+    <string name="app_name">TestFavoris</string>
+    <string name="classes">Parcourir les edt</string>
+    <string name="banniere">Banniere</string>
+    <string name="favoris">Favoris</string>
+    <string name="a_propos">A propos</string>
+    <string name="textview">Application codee par Johan Bertrand qui aime les conseils d administration :P </string>
+    <string name="demande_d_ajout">Demande d\'ajout</string>
 </resources>
