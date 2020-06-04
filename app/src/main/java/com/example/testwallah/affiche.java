@@ -16,7 +16,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 public class affiche extends AppCompatActivity {
     public static String url;
     public static int numérosemaine;
-    private static final int MAX_SEMAINE = 2;
+    private static final int MAX_SEMAINE =4 ;
     private Context context = affiche.this;
     ImageView imageView;
 
@@ -35,7 +35,7 @@ public class affiche extends AppCompatActivity {
     public void Semaineplus(View view) {
         numérosemaine = numérosemaine + 1;
         if (this.numérosemaine == MAX_SEMAINE+1) {
-            numérosemaine=2;
+            numérosemaine=4;
             dialog("Semaine max atteinte","Vous ne pouvez pas naviguer plus loin dans l'edt");
             return;
         }
